@@ -48,11 +48,11 @@ export default function OurProductsPage() {
             <ScrollReveal direction="left">
               <div className="relative">
                 <Image
-                  src="/assets/products/portable-chapati-machine.png"
+                  src="/assets/products/ec-kitchen-machine-3.png"
                   alt="Portable chapati machine by EC Kitchen Appliances"
                   width={600}
                   height={600}
-                  className="rounded-xl shadow-premium w-full aspect-square object-cover"
+                  className="rounded-xl shadow-premium w-full aspect-square object-contain bg-white"
                 />
               </div>
             </ScrollReveal>
@@ -147,11 +147,11 @@ export default function OurProductsPage() {
             <ScrollReveal direction="right">
               <div className="relative">
                 <Image
-                  src="/assets/products/portable-sevai-machine.png"
+                  src="/assets/products/ec-kitchen-machine-3.png"
                   alt="Portable sevai machine by EC Kitchen Appliances"
                   width={600}
                   height={600}
-                  className="rounded-xl shadow-premium w-full aspect-square object-cover"
+                  className="rounded-xl shadow-premium w-full aspect-square object-contain bg-white"
                 />
               </div>
             </ScrollReveal>
@@ -166,11 +166,11 @@ export default function OurProductsPage() {
             <ScrollReveal direction="left">
               <div className="relative">
                 <Image
-                  src="/assets/products/portable-idiyappam-machine.png"
+                  src="/assets/products/ec-kitchen-machine-3.png"
                   alt="Portable idiyappam machine by EC Kitchen Appliances"
                   width={600}
                   height={600}
-                  className="rounded-xl shadow-premium w-full aspect-square object-cover"
+                  className="rounded-xl shadow-premium w-full aspect-square object-contain bg-white"
                 />
               </div>
             </ScrollReveal>
@@ -226,11 +226,11 @@ export default function OurProductsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="relative">
                 <Image
-                  src="/assets/products/portable-sevai-idiyappam-machine.png"
+                  src="/assets/products/ec-kitchen-machine-2.png"
                   alt="Portable sevai and idiyappam 2 in 1 machine by EC Kitchen Appliances"
                   width={600}
                   height={600}
-                  className="rounded-xl shadow-premium w-full aspect-square object-cover"
+                  className="rounded-xl shadow-premium w-full aspect-square object-contain bg-white"
                 />
               </div>
               <div>

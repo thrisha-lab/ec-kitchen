@@ -8,76 +8,76 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 
 const galleryItems = [
   {
-    src: '/assets/products/portable-chapati-machine.png',
-    alt: 'Portable chapati machine by EC Kitchen Appliances',
+    src: '/assets/products/ec-kitchen-machine-1.png',
+    alt: 'EC Kitchen Appliances portable kitchen machine',
     category: 'Products',
-    caption: 'Portable Chapati Machine',
+    caption: 'EC Kitchen Machine — Model 1',
   },
   {
-    src: '/assets/products/portable-sevai-machine.png',
-    alt: 'Portable sevai machine by EC Kitchen Appliances',
+    src: '/assets/products/ec-kitchen-machine-2.png',
+    alt: 'EC Kitchen Appliances industrial kitchen machine',
     category: 'Products',
-    caption: 'Portable Sevai Machine',
+    caption: 'EC Kitchen Machine — Model 2',
   },
   {
-    src: '/assets/products/portable-idiyappam-machine.png',
-    alt: 'Portable idiyappam machine by EC Kitchen Appliances',
+    src: '/assets/products/ec-kitchen-machine-3.png',
+    alt: 'EC Kitchen Appliances magenta press machine',
     category: 'Products',
-    caption: 'Portable Idiyappam Machine',
+    caption: 'EC Kitchen Machine — Model 3',
   },
   {
-    src: '/assets/products/portable-sevai-idiyappam-machine.png',
-    alt: 'Portable sevai and idiyappam 2 in 1 machine by EC Kitchen Appliances',
+    src: '/assets/products/ec-kitchen-machine-1.png',
+    alt: 'EC Kitchen Appliances portable kitchen machine',
     category: 'Products',
-    caption: 'Portable Sevai & Idiyappam Machine — 2 in 1',
+    caption: 'EC Kitchen Machine — Featured',
   },
   {
-    src: '/assets/gallery/gallery-chapati-prep.png',
-    alt: 'Chapati preparation in modern Indian kitchen',
+    src: '/assets/products/ec-kitchen-machine-2.png',
+    alt: 'EC Kitchen Appliances industrial kitchen machine',
     category: 'Kitchen',
-    caption: 'Chapati Preparation',
+    caption: 'Industrial Kitchen Machine',
   },
   {
-    src: '/assets/gallery/gallery-sevai-food.png',
-    alt: 'Freshly prepared sevai with curry',
+    src: '/assets/products/ec-kitchen-machine-3.png',
+    alt: 'EC Kitchen Appliances magenta press machine',
     category: 'Lifestyle',
-    caption: 'Fresh Sevai',
+    caption: 'Magenta Press Machine',
   },
   {
-    src: '/assets/gallery/gallery-idiyappam-food.png',
-    alt: 'Steamed idiyappam on banana leaf',
+    src: '/assets/products/ec-kitchen-machine-1.png',
+    alt: 'EC Kitchen Appliances portable kitchen machine',
     category: 'Lifestyle',
-    caption: 'Steamed Idiyappam',
+    caption: 'Portable Kitchen Machine',
   },
   {
-    src: '/assets/gallery/gallery-detail-parts.png',
-    alt: 'Detail view of kitchen appliance construction',
+    src: '/assets/products/ec-kitchen-machine-2.png',
+    alt: 'EC Kitchen Appliances industrial kitchen machine',
     category: 'Details',
     caption: 'Appliance Details',
   },
   {
-    src: '/assets/gallery/gallery-kitchen-lifestyle.png',
-    alt: 'Modern Indian family kitchen with traditional cooking tools',
+    src: '/assets/products/ec-kitchen-machine-3.png',
+    alt: 'EC Kitchen Appliances magenta press machine',
     category: 'Lifestyle',
     caption: 'Modern Kitchen',
   },
   {
-    src: '/assets/gallery/gallery-kitchen-details.png',
-    alt: 'Indian kitchen ingredients and tools flat lay',
+    src: '/assets/products/ec-kitchen-machine-1.png',
+    alt: 'EC Kitchen Appliances portable kitchen machine',
     category: 'Kitchen',
     caption: 'Kitchen Essentials',
   },
   {
-    src: '/assets/gallery/gallery-chapati-stack.png',
-    alt: 'Stack of freshly made golden chapatis',
-    category: 'Lifestyle',
-    caption: 'Fresh Chapatis',
-  },
-  {
-    src: '/assets/gallery/gallery-lifestyle-cooking.png',
-    alt: 'Cooking with portable kitchen appliance',
+    src: '/assets/products/ec-kitchen-machine-2.png',
+    alt: 'EC Kitchen Appliances industrial kitchen machine',
     category: 'Lifestyle',
     caption: 'Cooking at Home',
+  },
+  {
+    src: '/assets/products/ec-kitchen-machine-3.png',
+    alt: 'EC Kitchen Appliances magenta press machine',
+    category: 'Lifestyle',
+    caption: 'Magenta Edition',
   },
 ];
 
@@ -196,7 +196,7 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="columns-1 sm:columns-2 lg:columns-3 space-y-4">
             {filteredItems.map((item, index) => (
-              <ScrollReveal key={item.src} delay={index * 50} className="break-inside-avoid mb-4">
+              <ScrollReveal key={`${item.src}-${index}`} delay={index * 50} className="break-inside-avoid mb-4">
                 <div
                   className="cursor-pointer group"
                   onClick={() => openLightbox(index)}
@@ -210,13 +210,13 @@ export default function GalleryPage() {
                   }}
                   aria-label={`View ${item.caption}`}
                 >
-                  <div className="rounded-lg overflow-hidden">
+                  <div className="rounded-lg overflow-hidden bg-white border border-warm-gray-pale">
                     <Image
                       src={item.src}
                       alt={item.alt}
                       width={600}
-                      height={400}
-                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      height={600}
+                      className="w-full h-auto aspect-square object-contain p-3 transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </div>
                   <p className="text-sm text-warm-gray mt-2">{item.caption}</p>

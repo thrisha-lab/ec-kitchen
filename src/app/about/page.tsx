@@ -135,12 +135,13 @@ export default function AboutPage() {
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
             <ScrollReveal delay={200} direction="up">
               <div className="bg-white border border-warm-gray-pale rounded-lg shadow-premium p-6 hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300">
-                <div className="mb-4 h-48 w-full relative rounded-lg overflow-hidden">
+                <div className="mb-4 h-48 w-full relative rounded-lg overflow-hidden bg-white">
                   <Image
-                    src="/assets/products/portable-chapati-machine.png"
+                    src="/assets/products/ec-kitchen-machine-3.png"
                     alt="Portable Chapati Machine"
                     fill
-                    className="object-cover"
+                    sizes="(max-width: 640px) 90vw, 30vw"
+                    className="object-contain p-2"
                   />
                 </div>
                 <div className="flex items-center gap-3 mb-3">
@@ -158,12 +159,13 @@ export default function AboutPage() {
             </ScrollReveal>
             <ScrollReveal delay={300} direction="up">
               <div className="bg-white border border-warm-gray-pale rounded-lg shadow-premium p-6 hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300">
-                <div className="mb-4 h-48 w-full relative rounded-lg overflow-hidden">
+                <div className="mb-4 h-48 w-full relative rounded-lg overflow-hidden bg-white">
                   <Image
-                    src="/assets/products/portable-sevai-machine.png"
+                    src="/assets/products/ec-kitchen-machine-3.png"
                     alt="Portable Sevai Machine"
                     fill
-                    className="object-cover"
+                    sizes="(max-width: 640px) 90vw, 30vw"
+                    className="object-contain p-2"
                   />
                 </div>
                 <div className="flex items-center gap-3 mb-3">
@@ -180,12 +182,13 @@ export default function AboutPage() {
             </ScrollReveal>
             <ScrollReveal delay={400} direction="up">
               <div className="bg-white border border-warm-gray-pale rounded-lg shadow-premium p-6 hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300">
-                <div className="mb-4 h-48 w-full relative rounded-lg overflow-hidden">
+                <div className="mb-4 h-48 w-full relative rounded-lg overflow-hidden bg-white">
                   <Image
-                    src="/assets/products/portable-idiyappam-machine.png"
+                    src="/assets/products/ec-kitchen-machine-3.png"
                     alt="Portable Idiyappam Machine"
                     fill
-                    className="object-cover"
+                    sizes="(max-width: 640px) 90vw, 30vw"
+                    className="object-contain p-2"
                   />
                 </div>
                 <div className="flex items-center gap-3 mb-3">
@@ -303,12 +306,13 @@ export default function AboutPage() {
               </div>
             </ScrollReveal>
             <ScrollReveal direction="right">
-              <div className="relative h-80 lg:h-96 w-full overflow-hidden rounded-xl shadow-premium hover:scale-[1.02] transition-transform duration-500">
+              <div className="relative h-80 lg:h-96 w-full overflow-hidden rounded-xl shadow-premium bg-white hover:scale-[1.02] transition-transform duration-500">
                 <Image
-                  src="/assets/gallery/gallery-kitchen-lifestyle.png"
-                  alt="Kitchen lifestyle in Tamil Nadu"
+                  src="/assets/products/ec-kitchen-machine-1.png"
+                  alt="EC Kitchen Appliances portable kitchen machine"
                   fill
-                  className="object-cover"
+                  sizes="(max-width: 1024px) 90vw, 45vw"
+                  className="object-contain p-4"
                 />
               </div>
             </ScrollReveal>

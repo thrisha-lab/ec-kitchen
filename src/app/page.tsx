@@ -50,12 +50,13 @@ export default function HomePage() {
 
             {/* Right: Hero Image */}
             <ScrollReveal direction="right" delay={200}>
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-premium">
+              <div className="relative aspect-square sm:aspect-square lg:aspect-[4/5] rounded-xl overflow-hidden shadow-premium bg-white">
                 <Image
-                  src="/assets/hero/hero-kitchen.png"
-                  alt="Modern kitchen setup with EC Kitchen Appliances"
+                  src="/assets/products/ec-kitchen-machine-1.png"
+                  alt="EC Kitchen Appliances portable kitchen machine"
                   fill
-                  className="object-cover hover:scale-[1.02] transition-transform duration-500"
+                  sizes="(max-width: 1024px) 90vw, 45vw"
+                  className="object-contain hover:scale-[1.02] transition-transform duration-500"
                   priority
                 />
               </div>
@@ -142,12 +143,13 @@ export default function HomePage() {
             {products.map((product, index) => (
               <ScrollReveal key={product.id} delay={index * 100}>
                 <div className="bg-white border border-warm-gray-pale rounded-lg shadow-premium overflow-hidden hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                  <div className="aspect-square relative">
+                  <div className="aspect-square relative bg-white">
                     <Image
                       src={product.image}
                       alt={product.alt}
                       fill
-                      className="object-cover"
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 23vw"
+                      className="object-contain p-2"
                     />
                   </div>
                   <div className="p-5 sm:p-6 flex flex-col flex-1">
@@ -214,12 +216,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-premium">
+              <div className="relative aspect-square sm:aspect-square lg:aspect-[4/5] rounded-xl overflow-hidden shadow-premium bg-white">
                 <Image
-                  src="/assets/products/portable-sevai-idiyappam-machine.png"
+                  src="/assets/products/ec-kitchen-machine-2.png"
                   alt="EC Kitchen Appliances portable sevai and idiyappam machine"
                   fill
-                  className="object-cover hover:scale-[1.02] transition-transform duration-500"
+                  sizes="(max-width: 1024px) 90vw, 45vw"
+                  className="object-contain hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
               <div>
@@ -273,13 +276,14 @@ export default function HomePage() {
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 mt-14">
             {galleryImages.map((image, index) => (
-              <ScrollReveal key={image.src} delay={index * 80}>
-                <div className="relative aspect-square rounded-lg overflow-hidden">
+              <ScrollReveal key={`${image.src}-${index}`} delay={index * 80}>
+                <div className="relative aspect-square rounded-lg overflow-hidden bg-white border border-warm-gray-pale">
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover hover:scale-[1.02] transition-transform duration-500"
+                    sizes="(max-width: 768px) 45vw, 30vw"
+                    className="object-contain p-2 hover:scale-[1.03] transition-transform duration-500"
                   />
                 </div>
               </ScrollReveal>
@@ -368,7 +372,7 @@ const products = [
     id: 1,
     number: '01',
     name: 'Portable Chapati Machine',
-    image: '/assets/products/portable-chapati-machine.png',
+    image: '/assets/products/ec-kitchen-machine-3.png',
     alt: 'EC Kitchen Appliances portable chapati machine',
     description:
       'A portable appliance designed to simplify chapati preparation at home, making it easier to prepare fresh chapatis daily.',
@@ -378,7 +382,7 @@ const products = [
     id: 2,
     number: '02',
     name: 'Portable Sevai Machine',
-    image: '/assets/products/portable-sevai-machine.png',
+    image: '/assets/products/ec-kitchen-machine-3.png',
     alt: 'EC Kitchen Appliances portable sevai machine',
     description:
       'Prepare fresh sevai at home with this portable machine, designed for convenient and consistent sevai preparation.',
@@ -388,7 +392,7 @@ const products = [
     id: 3,
     number: '03',
     name: 'Portable Idiyappam Machine',
-    image: '/assets/products/portable-idiyappam-machine.png',
+    image: '/assets/products/ec-kitchen-machine-3.png',
     alt: 'EC Kitchen Appliances portable idiyappam machine',
     description:
       'A compact machine for making fresh idiyappam at home, streamlining the preparation of this traditional favourite.',
@@ -398,7 +402,7 @@ const products = [
     id: 4,
     number: '04',
     name: 'Portable Sevai & Idiyappam Machine — 2 in 1',
-    image: '/assets/products/portable-sevai-idiyappam-machine.png',
+    image: '/assets/products/ec-kitchen-machine-3.png',
     alt:
       'EC Kitchen Appliances portable 2-in-1 sevai and idiyappam machine',
     description:
@@ -436,28 +440,28 @@ const valueProps = [
 
 const galleryImages = [
   {
-    src: '/assets/gallery/gallery-chapati-prep.png',
-    alt: 'Chapati preparation with EC Kitchen Appliances',
+    src: '/assets/products/ec-kitchen-machine-1.png',
+    alt: 'EC Kitchen Appliances portable kitchen machine',
   },
   {
-    src: '/assets/gallery/gallery-sevai-food.png',
-    alt: 'Fresh sevai prepared with EC Kitchen Appliances',
+    src: '/assets/products/ec-kitchen-machine-2.png',
+    alt: 'EC Kitchen Appliances industrial kitchen machine',
   },
   {
-    src: '/assets/gallery/gallery-idiyappam-food.png',
-    alt: 'Idiyappam dish prepared with EC Kitchen Appliances',
+    src: '/assets/products/ec-kitchen-machine-3.png',
+    alt: 'EC Kitchen Appliances magenta press machine',
   },
   {
-    src: '/assets/gallery/gallery-detail-parts.png',
-    alt: 'Detailed view of EC Kitchen Appliances parts and components',
+    src: '/assets/products/ec-kitchen-machine-1.png',
+    alt: 'EC Kitchen Appliances portable kitchen machine',
   },
   {
-    src: '/assets/gallery/gallery-kitchen-lifestyle.png',
-    alt: 'EC Kitchen Appliances in a modern kitchen setting',
+    src: '/assets/products/ec-kitchen-machine-2.png',
+    alt: 'EC Kitchen Appliances industrial kitchen machine',
   },
   {
-    src: '/assets/gallery/gallery-chapati-stack.png',
-    alt: 'Stack of freshly made chapatis',
+    src: '/assets/products/ec-kitchen-machine-3.png',
+    alt: 'EC Kitchen Appliances magenta press machine',
   },
 ];
 
